@@ -47,7 +47,15 @@ export const useGameForm = (
   ) => {
     if (value.length > 1) return;
 
-    const newValue = value.toUpperCase();
+    // Convert Turkish characters to English equivalents
+    const newValue = value
+      .replace(/İ/g, "I")
+      .replace(/Ğ/g, "G")
+      .replace(/Ü/g, "U")
+      .replace(/Ş/g, "S")
+      .replace(/Ö/g, "O")
+      .replace(/Ç/g, "C")
+      .toUpperCase();
     onChange(newValue);
 
     if (newValue) {
@@ -78,7 +86,6 @@ export const useGameForm = (
               .join(" ");
             const isCorrect = await onSubmit(guess);
             if (!isCorrect) {
-              // Reset form and focus first input when guess is wrong
               reset();
               const focusTimer = setTimeout(() => {
                 if (firstInputRef.current) {
