@@ -4,7 +4,8 @@ export type CategoryId =
   | "books"
   | "games"
   | "anime"
-  | "songs";
+  | "songs"
+  | "lol";
 
 export interface Category {
   id: CategoryId;

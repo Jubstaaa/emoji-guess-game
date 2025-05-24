@@ -43,4 +43,11 @@ export const categories: Category[] = [
     icon: "🎵",
     slug: "songs",
   },
+  {
+    id: "lol" as CategoryId,
+    name: "LoL Characters",
+    description: "Guess the League of Legends champions from emojis!",
+    icon: "🧙‍♂️",
+    slug: "lol-characters",
+  },
 ];
