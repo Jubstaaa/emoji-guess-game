@@ -10,7 +10,7 @@ type FormValues = {
 
 export const useGameForm = (
   gameState: GameState | null,
-  onSubmit: (guess: string) => void
+  onSubmit: (guess: string) => Promise<boolean>
 ) => {
   const { control, handleSubmit, reset, setValue, watch, register } =
     useForm<FormValues>({
@@ -72,11 +72,21 @@ export const useGameForm = (
           group.letters.every((letter) => letter.trim() !== "")
         );
         if (allFilled) {
-          handleSubmit((data) => {
+          handleSubmit(async (data) => {
             const guess = data.words
               .map((group) => group.letters.join(""))
               .join(" ");
-            onSubmit(guess);
+            const isCorrect = await onSubmit(guess);
+            if (!isCorrect) {
+              // Reset form and focus first input when guess is wrong
+              reset();
+              const focusTimer = setTimeout(() => {
+                if (firstInputRef.current) {
+                  firstInputRef.current.focus();
+                }
+              }, 100);
+              return () => clearTimeout(focusTimer);
+            }
           })();
         }
       }

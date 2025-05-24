@@ -37,7 +37,9 @@ export default function Game({
     handleInputChange,
     handleKeyDown,
     setValue,
-  } = useGameForm(localGameState, handleGuess);
+  } = useGameForm(localGameState, async (guess: string) => {
+    return handleGuess(guess);
+  });
 
   if (!gameState) {
     return <></>;

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import Image from "next/image";
 import Link from "next/link";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -74,6 +75,7 @@ export default function RootLayout({
           </div>
         </main>
         <Toaster position="top-center" />
+        <GoogleAnalytics gaId="G-BR1ZG31FEP" />
       </body>
     </html>
   );

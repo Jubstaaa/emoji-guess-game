@@ -43,6 +43,7 @@ export const useGameLogic = (
         id: "error-toast",
       });
     }
+    return isCorrect;
   };
 
   return {
