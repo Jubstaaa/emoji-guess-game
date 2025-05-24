@@ -851,7 +851,7 @@ export const gameItems: GameItem[] = [
     id: "lol-36",
     categoryId: "lol",
     name: "Gnar",
-    emojis: ["🦊", "🦖", "😡"],
+    emojis: ["🦊", "🦖", "😡", "🪃"],
   },
   {
     id: "lol-37",
@@ -1343,7 +1343,7 @@ export const gameItems: GameItem[] = [
     id: "lol-118",
     categoryId: "lol",
     name: "Sivir",
-    emojis: ["🗡️", "🛡️", "👩"],
+    emojis: ["🗡️", "🪃", "👩"],
   },
   {
     id: "lol-119",
