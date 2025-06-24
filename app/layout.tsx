@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import Image from "next/image";
 import Link from "next/link";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -76,6 +77,13 @@ export default function RootLayout({
         </main>
         <Toaster position="top-center" />
         <GoogleAnalytics gaId="G-BR1ZG31FEP" />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2149079899242374`}
+            crossOrigin="anonymous"
+          />
+        )}
       </body>
     </html>
   );
