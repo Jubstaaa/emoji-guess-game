@@ -59,7 +59,7 @@ export default function LetterInput({
         ref={isFirstInput ? inputRef : undefined}
         autoFocus={isFirstInput}
         disabled={disabled}
-        className="w-full h-[2rem] xs:h-[2.25rem] sm:h-10 md:h-12 text-center text-base xs:text-lg sm:text-xl md:text-2xl font-bold bg-white/50 backdrop-blur-sm border-2 border-indigo-100 rounded-lg sm:rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none disabled:bg-gray-50 disabled:border-gray-100 shadow-sm transition-all"
+        className="w-full h-[2rem] xs:h-[2.25rem] sm:h-10 md:h-12 text-center text-base xs:text-lg sm:text-xl md:text-2xl font-bold bg-white/50 backdrop-blur-sm border-2 border-indigo-100 rounded-lg sm:rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 focus:outline-none disabled:bg-gray-50 disabled:border-gray-100 shadow-sm transition-all text-black"
         data-index={globalIndex}
       />
     </motion.div>
