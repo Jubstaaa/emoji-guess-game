@@ -5,7 +5,11 @@ export type CategoryId =
   | "games"
   | "anime"
   | "songs"
-  | "lol";
+  | "lol"
+  | "cities"
+  | "cartoons"
+  | "food"
+  | "brands";
 
 export interface Category {
   id: CategoryId;
