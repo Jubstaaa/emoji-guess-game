@@ -1601,7 +1601,7 @@ export const gameItems: GameItem[] = [
     id: "lol-147",
     categoryId: "lol",
     name: "Volibear",
-    emojis: ["🐻", "⚡", "❄️", "⛈️", "CocaCola"],
+    emojis: ["🐻", "⚡", "❄️", "⛈️", "🥤"],
   },
   {
     id: "lol-148",
