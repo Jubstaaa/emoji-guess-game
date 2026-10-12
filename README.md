@@ -1,36 +1,23 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emoji Guess Game
 
-## Getting Started
+A browser game where you guess a movie, TV series, book, video game, anime, song, League of Legends champion, city, cartoon, food or brand from a row of emojis. Each category has its own page, answers are typed letter by letter, and already solved items are remembered in `localStorage` so they don't repeat.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router), React 19, TypeScript
+- Tailwind CSS 3, Headless UI, Heroicons
+- Framer Motion, react-hook-form, react-hot-toast
+- Static game data in `data/categories.ts` and `data/gameItems.ts`, no backend
+
+## Running it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts: `npm run build`, `npm run start`, `npm run lint`. No environment variables are needed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Archived, no longer maintained.
